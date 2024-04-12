@@ -14,7 +14,7 @@ Git
 Siga estas etapas para configurar o ambiente de desenvolvimento:
 
 Clone este repositório para o seu computador usando o Git:
-git clone https://github.com/seu-usuario/seu-projeto.git
+git clone https://github.com/MelissaBG/selenium-java-automacao.git
 
 Navegue até o diretório do projeto:
 cd seu-projeto
@@ -79,3 +79,4 @@ rcaneppele (https://github.com/rcaneppele) - Desenvolvedor - Desenvolvedor da AP
 Melissa - QA - Analista e desenvolvedora dos testes.
 
 📄 Licença
+Esse projeto está sob licença. Veja o arquivo LICENÇA para mais detalhes.
