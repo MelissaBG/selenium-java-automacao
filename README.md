@@ -14,7 +14,7 @@ Git
 Siga estas etapas para configurar o ambiente de desenvolvimento:
 
 Clone este repositório para o seu computador usando o Git:
-git clone https://github.com/seu-usuario/seu-projeto.git
+git clone https://github.com/MelissaBG/selenium-java-automacao.git
 
 Navegue até o diretório do projeto:
 cd seu-projeto
@@ -73,9 +73,3 @@ Maven - Gerenciador de dependências e construção de projetos
 
 📌 Versão dos testes:
 1.1
-
-✒️ Autores
-rcaneppele (https://github.com/rcaneppele) - Desenvolvedor - Desenvolvedor da API utilizadanos testes.
-Melissa - QA - Analista e desenvolvedora dos testes.
-
-📄 Licença
