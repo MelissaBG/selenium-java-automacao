@@ -1,0 +1,50 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+//Page Object - Acesso ao webdriver, api do selenium e a manipulação da página.
+public class LoginPage {
+        private static final String URL_LOGIN =  "http://localhost:8080/login";
+
+        private WebDriver browser;
+        public LoginPage(){
+                // Inicialize o WebDriverManager para configurar automaticamente o driver do Chrome
+                WebDriverManager.firefoxdriver().setup();
+                this.browser = new FirefoxDriver();
+                this.browser.navigate().to(URL_LOGIN);
+        }
+        public void fecharPagina(){
+                this.browser.quit();
+        }
+
+        public void preencherFormularioDeLogin(String username, String password){
+                browser.findElement(By.id("username")).sendKeys(username);
+                browser.findElement(By.id("password")).sendKeys(password);
+        }
+
+        public boolean isPaginaDeLogin() {
+                return browser.getCurrentUrl().equals(URL_LOGIN);
+        }
+
+        public String getNomeUsuarioLogado(){
+                try {
+                        return  browser.findElement(By.id("usuario-logado")).getText();
+                } catch (NoSuchElementException e){
+                        return null;
+                }
+        }
+
+        public void efetuarLogin() {
+                browser.findElement(By.id("login-form")).submit();
+        }
+
+        public void navegaParaPaginaDeLances() {
+                this.browser.navigate().to("http://localhost:8080/leiloes/2");
+        }
+
+        public boolean contemTexto(String texto) {
+               return browser.getPageSource().contains(texto);
+        }
+}
